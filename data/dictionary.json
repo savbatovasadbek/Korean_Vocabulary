@@ -1,0 +1,39 @@
+{
+  "1": [
+    {
+      "word": "five",
+      "en": "five",
+      "uz": "besh",
+      "korean": "오",
+      "url": "five.png"
+    },
+    {
+      "word": "tooth",
+      "en": "tooth",
+      "uz": "bu/tish",
+      "korean": "이",
+      "url": "tooth.png"
+    },
+    {
+      "word": "younger sibling",
+      "en": "younger sibling",
+      "uz": "yosh aka-uka",
+      "korean": "아우",
+      "url": "younger_sibling.png"
+    },
+    {
+      "word": "kid",
+      "en": "kid",
+      "uz": "bola",
+      "korean": "아이",
+      "url": "kid.png"
+    },
+    {
+      "word": "cucumber",
+      "en": "cucumber",
+      "uz": "bodring",
+      "korean": "오이",
+      "url": "cucumber.png"
+    }
+  ]
+}
