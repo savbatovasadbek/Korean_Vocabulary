@@ -98,7 +98,51 @@ body {
 .corrent-word select {
   outline: none;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
+  border: none;
+}
+
+select {
+  /* styling */
+  background-color: white;
+  border: thin solid blue;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+
+  /* reset */
+
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* arrows */
+
+select.classic {
+  background-image: linear-gradient(45deg, transparent 50%, blue 50%),
+    linear-gradient(135deg, blue 50%, transparent 50%),
+    linear-gradient(to right, skyblue, skyblue);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), 100% 0;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+select.classic:focus {
+  background-image: linear-gradient(45deg, white 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, white 50%),
+    linear-gradient(to right, gray, gray);
+  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, 100% 0;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+  background-repeat: no-repeat;
+  border-color: grey;
+  outline: 0;
 }
 
 .container .main .question-section .answer-box {
@@ -110,8 +154,10 @@ body {
 }
 
 .container .main .question-section .answer-box input {
+  width: 250px;
+  /* height: 50px; */
   padding: 5px 7px;
-  font-size: 20px;
+  font-size: 25px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serifs;
   outline: none;
@@ -293,5 +339,12 @@ a:hover + .icon {
   .container .main .image-section img {
     width: 150px;
     height: 150px;
+  }
+
+  .image-lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
 }

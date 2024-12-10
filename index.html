@@ -16,10 +16,6 @@
       <div class="main">
         <div class="question-section">
           <div class="corrent-word">
-            <select name="lang" id="lang">
-              <option value="en">en</option>
-              <option value="uz">uz</option>
-            </select>
             <h2 id="word"></h2>
           </div>
 
@@ -43,7 +39,13 @@
             </div>
           </div>
         </div>
-        <div class="image-section" id="wordImage"></div>
+        <div class="image-lang">
+          <div class="image-section" id="wordImage"></div>
+          <select name="lang" id="lang" class="classic">
+            <option value="en">en</option>
+            <option value="uz">uz</option>
+          </select>
+        </div>
       </div>
 
       <h3 id="response" class="answer-correct"></h3>
