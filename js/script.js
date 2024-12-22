@@ -1,3 +1,5 @@
+import data from "../data/dataJson.js";
+
 const answer = document.getElementById("userAnswer");
 const answerBtn = document.getElementById("answerBtn");
 const nextBtn = document.getElementById("nextBtn");
@@ -6,10 +8,13 @@ const response = document.getElementById("response");
 const wordImage = document.getElementById("wordImage");
 const lang = document.getElementById("lang");
 const correct_res = document.getElementById("correct_res");
+const songBtn = document.getElementById("song");
 
 let user_answer = "";
 let count = 0;
 let correctLang = "en";
+let song = new Audio("../data/audios/five.mp3");
+
 lang.addEventListener("change", () => {
   correctLang = lang.value;
   if (correctLang == "en") {
@@ -19,43 +24,6 @@ lang.addEventListener("change", () => {
   }
 });
 
-let data = [
-  {
-    word: "five",
-    en: "five",
-    uz: "besh",
-    korean: "오",
-    url: "five.png",
-  },
-  {
-    word: "tooth",
-    en: "tooth",
-    uz: "bu/tish",
-    korean: "이",
-    url: "tooth.png",
-  },
-  {
-    word: "younger sibling",
-    en: "younger sibling",
-    uz: "yosh aka-uka",
-    korean: "아우",
-    url: "younger_sibling.png",
-  },
-  {
-    word: "kid",
-    en: "kid",
-    uz: "bola",
-    korean: "아이",
-    url: "kid.png",
-  },
-  {
-    word: "cucumber",
-    en: "cucumber",
-    uz: "bodring",
-    korean: "오이",
-    url: "cucumber.png",
-  },
-];
 word.innerText = data[count].word;
 let correctAnswer = data[count].korean;
 wordImage.innerHTML = `
@@ -107,6 +75,7 @@ nextBtn.addEventListener("click", () => {
         id="wordImage"
         src="./data/image/${data[count + 1].url}"
         alt="Correct answer's image"/>`;
+      song = new Audio(`../data/audios/${data[i + 1].audio}`);
     } else if (count == data.length - 1) {
       count = 0;
       if (correctLang == "en") {
@@ -123,4 +92,8 @@ nextBtn.addEventListener("click", () => {
     }
   }
   count++;
+});
+
+songBtn.addEventListener("click", () => {
+  song.play();
 });
