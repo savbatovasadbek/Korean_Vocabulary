@@ -84,6 +84,7 @@ nextBtn.addEventListener("click", () => {
         word.innerText = data[0].uz;
       }
       correctAnswer = data[0].korean;
+      song = new Audio(`../data/audios/${data[0].audio}`);
       wordImage.innerHTML = `
         <img
         id="wordImage"

@@ -42,7 +42,7 @@ body {
   gap: 20px;
   margin-bottom: 20px;
   text-transform: capitalize;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 }
 
 .corrent-word h2 {
@@ -105,6 +105,10 @@ select.classic:focus {
   justify-content: center;
   /* flex-direction: column; */
   gap: 16px;
+}
+
+.selection div {
+  padding-top: 10px;
 }
 
 .selection i {
