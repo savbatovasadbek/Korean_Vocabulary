@@ -103,7 +103,7 @@ select.classic:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 16px;
 }
 
@@ -315,7 +315,7 @@ a:hover + .icon {
   right: -25%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .main {
     flex-direction: column-reverse;
     gap: 15px;
@@ -335,5 +335,9 @@ a:hover + .icon {
     align-items: center;
     justify-content: center;
     gap: 20px;
+  }
+
+  .selection {
+    flex-direction: column;
   }
 }
