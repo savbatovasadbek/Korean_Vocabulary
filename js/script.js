@@ -5,6 +5,7 @@ const word = document.getElementById("word");
 const response = document.getElementById("response");
 const wordImage = document.getElementById("wordImage");
 const lang = document.getElementById("lang");
+const correct_res = document.getElementById("correct_res");
 
 let user_answer = "";
 let count = 0;
@@ -72,6 +73,8 @@ answerBtn.addEventListener("click", () => {
     } else if (correctLang == "uz") {
       response.innerText = "To'g'ri";
     }
+    correct_res.innerHTML = `<h1>✅</h1>`;
+
     response.classList.remove("answer-incorrect");
     response.classList.add("answer-correct");
   } else {
@@ -80,6 +83,7 @@ answerBtn.addEventListener("click", () => {
     } else if (correctLang == "uz") {
       response.innerText = "Noto'g'ri";
     }
+    correct_res.innerHTML = `<h1>❌</h1>`;
     response.classList.remove("answer-correct");
     response.classList.add("answer-incorrect");
   }
@@ -88,6 +92,7 @@ answerBtn.addEventListener("click", () => {
 nextBtn.addEventListener("click", () => {
   answer.value = "";
   response.innerText = "";
+  correct_res.innerHTML = ``;
 
   for (let i = 0; i < data.length; i++) {
     if (count == i) {

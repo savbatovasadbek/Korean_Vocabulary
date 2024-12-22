@@ -20,7 +20,12 @@
           </div>
 
           <div class="answer-box">
-            <input type="text" id="userAnswer" placeholder="Right here ..." />
+            <div class="input">
+              <input type="text" id="userAnswer" placeholder="Right here ..." />
+              <div id="correct_res">
+                <!-- <h1>❌✅</h1> -->
+              </div>
+            </div>
             <div class="btn-box">
               <button id="answerBtn">Check</button>
               <div class="link_wrapper" id="nextBtn">
@@ -48,7 +53,7 @@
         </div>
       </div>
 
-      <h3 id="response" class="answer-correct"></h3>
+      <h3 id="response" class="answer-correct">Your result</h3>
     </div>
 
     <script type="module" src="./js/script.js"></script>

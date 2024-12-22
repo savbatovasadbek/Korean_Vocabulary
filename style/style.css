@@ -154,8 +154,7 @@ select.classic:focus {
 }
 
 .container .main .question-section .answer-box input {
-  width: 250px;
-  /* height: 50px; */
+  width: 100%;
   padding: 5px 7px;
   font-size: 25px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -164,6 +163,22 @@ select.classic:focus {
   border-radius: 10px;
   border: none;
 }
+
+.container .main .question-section .answer-box .input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  /* height: 50px; */
+  position: relative;
+}
+
+.container .main .question-section .answer-box .input #correct_res {
+  position: absolute;
+  right: 10px;
+  /* display: none; */
+}
+
 .container .main .question-section .answer-box button {
   padding: 3px 5px;
   font-size: 20px;
@@ -171,6 +186,7 @@ select.classic:focus {
 }
 
 #response {
+  display: none;
   margin-top: 20px;
   font-size: 20px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
